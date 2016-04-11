@@ -10,7 +10,7 @@ class Movie
     end
 
     def thumbs_down
-        @rank -= 1    
+        @rank -= 1
     end
 
     attr_reader :title
@@ -19,7 +19,7 @@ class Movie
     # def title
     #     @title
     # end
-    
+
     attr_reader :rank
 
     # The code above can be refactored into attr_reader :title, :rank
@@ -28,13 +28,14 @@ class Movie
     #     @title = new_title
     # end
     # The alternative is
-    
+
     attr_writer :title
 
     # To get both getter and setter method to cater to :title
     # we can use
     # attr_accessor
 
+    # To just use the movie1 object use it
     def to_s
         "#{@title} has a rank of #{@rank}"
     end
@@ -42,6 +43,9 @@ end
 
 movie1 = Movie.new("Scooby Doo", 10)
 movie1.thumbs_up
+
+# Puts method converts the movie object to a string. This is why
+# we have the to_s method
 puts movie1
 puts movie1.title
 puts movie1.rank
